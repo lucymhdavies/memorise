@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Password Memorise</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!-- Styling from https://nostalgic-css.github.io/NES.css/ -->
+    <link href="https://unpkg.com/nes.css@2.2.1/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- My Stuff -->
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+    <div class="nes-container with-title is-centered">
+        <p class="title">Memorise Your Passwords</p>
+
+        <div class="nes-field">
+            <div>
+                <label for="original">Paste</label>
+                <label>
+                    <input checked class="nes-radio" id="show-original" name="original" type="radio" />
+                    <span>Show</span>
+                </label>
+
+                <label>
+                    <input class="nes-radio" id="hide-original" name="original" type="radio" />
+                    <span>Hide</span>
+                </label>
+            </div>
+
+            <input class="nes-input" id="original" type="input">
+        </div>
+
+        <div class="nes-field">
+
+            <div>
+                <label for="typed">Type!</label>
+                <label>
+                    <input checked class="nes-radio" id="show-typed" name="typed" type="radio" />
+                    <span>Show</span>
+                </label>
+                <label>
+                    <input class="nes-radio" id="hide-typed" name="typed" type="radio" checked />
+                    <span>Hide</span>
+                </label>
+            </div>
+
+            <input class="nes-input" id="typed" type="password">
+        </div>
+
+        <div class="nes-field">
+            <label for="progress">Levenshtein Distance</label>
+            <progress class="nes-progress" id="progress" max="100" value="0"></progress>
+        </div>
+    </div>
+
+
+    <div class="nes-container with-title is-centered">
+        <span class="nes-text is-error">Do not use this unless you have read and understood the code</span>
+        <!-- And even then... don't trust me. I don't know what I'm doing 🙃 -->
+
+        <br /><br />
+        <div>
+            <a href="https://github.com/lucymhdavies/memorise"><i class="nes-icon github is-large"></i></a>
+        </div>
+
+    </div>
+</body>
+
+</html>
