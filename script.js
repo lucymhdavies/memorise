@@ -1,9 +1,31 @@
 
 $(function () {
     registerHandlers();
+
+    // If we have no cookie, show warning
+    if (document.cookie.indexOf("cookieconsent=") == -1) {
+        document.getElementById('dialog-default').showModal();
+    }
 });
 
+function cookie() {
+    // set a new cookie
+    expiry = new Date();
+    expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
+
+    // Date()'s toGMTSting() method will format the date correctly for a cookie
+    document.cookie = "cookieconsent=yes; max-age=" + expiry.toGMTString();
+}
+
+function escape() {
+    window.location.replace("https://lmhd.me");
+}
+
 function registerHandlers() {
+    // Hide dialog and consent to cookie
+    $("#stay").click(cookie)
+    $("#run-away").click(escape)
+
     // Toggle Visibility
     $(".nes-radio").change(toggleVisibility)
 

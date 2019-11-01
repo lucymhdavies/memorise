@@ -23,6 +23,22 @@
 
 <body>
 
+    <dialog class="nes-dialog is-rounded" id="dialog-default">
+        <form method="dialog">
+            <p class="title">Warning</p>
+            <p>This is a tool I made for myself. Do not use it unless you have read and understood the code.</p>
+            <!-- And even then... -->
+            
+            <p>Also this tool will put one of them scary <a
+                    href="https://en.wikipedia.org/wiki/Privacy_and_Electronic_Communications_Directive_2002">&#x1f36a;
+                    cookies</a> on your computer if you continue.</p>
+            <menu class="dialog-menu">
+                <button class="nes-btn" id="run-away">Cancel</button>
+                <button class="nes-btn is-primary" id="stay">Continue</button>
+            </menu>
+        </form>
+    </dialog>
+
 
     <div class="nes-container with-title is-centered">
         <p class="title">Memorise Your Passwords</p>
@@ -67,23 +83,20 @@
         </div>
 
         <div class="nes-field" id="reset">
-                <label for="reset">Reset</label>
-                <button type="button" id="reset-both" name="reset" class="nes-btn">Both</button>
-                <button type="button" id="reset-typed" name="reset" class="nes-btn">Typed</button>
+            <label for="reset">Reset</label>
+            <button type="button" id="reset-both" name="reset" class="nes-btn">Both</button>
+            <button type="button" id="reset-typed" name="reset" class="nes-btn">Typed</button>
         </div>
 
     </div>
 
 
     <div class="nes-container with-title is-centered">
-        <span class="nes-text is-error">Do not use this unless you have read and understood the code</span>
-        <!-- And even then... don't trust me. I don't know what I'm doing 🙃 -->
-
-        <br /><br />
         <div>
             <a href="https://github.com/lucymhdavies/memorise"><i class="nes-icon github is-large"></i></a>
+            <a href="https://lmhd.me"><img id="avatar"
+                    src="https://s.gravatar.com/avatar/8f58e67d013167b1110fdb78ef23fe7f?s=16&r=g"></img></a>
         </div>
-
     </div>
 </body>
 

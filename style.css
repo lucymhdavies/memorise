@@ -5,3 +5,13 @@
 #reset {
     display: none;
 }
+
+#dialog-default {
+    margin: 20px;
+}
+
+#avatar {
+    image-rendering: pixelated;
+    height: 64px;
+    vertical-align: top;
+}
