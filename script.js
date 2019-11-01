@@ -14,7 +14,7 @@ function cookie() {
     expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
 
     // Date()'s toGMTSting() method will format the date correctly for a cookie
-    document.cookie = "cookieconsent=yes; max-age=" + expiry.toGMTString();
+    document.cookie = "cookieconsent=yes; expires=" + expiry.toGMTString();
     $("#warning").hide()
 }
 
