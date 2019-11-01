@@ -4,11 +4,29 @@ $(function () {
 });
 
 function registerHandlers() {
+    // Toggle Visibility
     $(".nes-radio").change(toggleVisibility)
+
+    // Reset
+    $("#reset-both").click(resetBoth)
+    $("#reset-typed").click(resetTyped)
+
+    // Difference
     $("#original").keyup(updateDifference)
     $("#original").change(updateDifference)
     $("#typed").keyup(updateDifference)
     $("#typed").change(updateDifference)
+}
+
+function resetBoth() {
+    $("#original").val("")
+    resetTyped()
+}
+
+function resetTyped() {
+    $("#typed").val("")
+    updateDifference()
+    $("#reset").hide()
 }
 
 function toggleVisibility() {
@@ -48,6 +66,8 @@ function updateDifference() {
         $("#progress").addClass("is-success")
         $("#typed").removeClass("is-error")
         $("#progress").removeClass("is-error")
+
+        $("#reset").show()
     }
 
     if (original.length == 0 && typed.length == 0) {

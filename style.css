@@ -1,3 +1,7 @@
 .nes-container, nes-field {
     margin: 20px;
 }
+
+#reset {
+    display: none;
+}
