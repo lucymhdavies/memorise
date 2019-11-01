@@ -6,8 +6,8 @@
     display: none;
 }
 
-#dialog-default {
-    margin: 20px;
+#warning {
+    display:none;
 }
 
 #avatar {

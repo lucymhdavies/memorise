@@ -4,7 +4,7 @@ $(function () {
 
     // If we have no cookie, show warning
     if (document.cookie.indexOf("cookieconsent=") == -1) {
-        document.getElementById('dialog-default').showModal();
+        $("#warning").show()
     }
 });
 
@@ -15,6 +15,7 @@ function cookie() {
 
     // Date()'s toGMTSting() method will format the date correctly for a cookie
     document.cookie = "cookieconsent=yes; max-age=" + expiry.toGMTString();
+    $("#warning").hide()
 }
 
 function escape() {

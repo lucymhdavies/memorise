@@ -23,21 +23,22 @@
 
 <body>
 
-    <dialog class="nes-dialog is-rounded" id="dialog-default">
-        <form method="dialog">
-            <p class="title">Warning</p>
-            <p>This is a tool I made for myself. Do not use it unless you have read and understood the code.</p>
-            <!-- And even then... -->
-            
-            <p>Also this tool will put one of them scary <a
-                    href="https://en.wikipedia.org/wiki/Privacy_and_Electronic_Communications_Directive_2002">&#x1f36a;
-                    cookies</a> on your computer if you continue.</p>
-            <menu class="dialog-menu">
-                <button class="nes-btn" id="run-away">Cancel</button>
-                <button class="nes-btn is-primary" id="stay">Continue</button>
-            </menu>
-        </form>
-    </dialog>
+    <div class="nes-container with-title is-centered" id="warning">
+        <p class="title">Warning</p>
+        <p>This is a tool I made for myself. Do not use it unless you have read and understood the code.</p>
+        <!-- And even then... -->
+
+        <p>Also this tool will put one of them scary <a
+                href="https://en.wikipedia.org/wiki/Privacy_and_Electronic_Communications_Directive_2002">&#x1f36a;
+                cookies</a> on your computer if you continue.</p>
+        <div class="nes-field">
+            <button class="nes-btn is-error" id="run-away">Cancel</button>
+        </div>
+        <br/>
+        <div class="nes-field">
+            <button class="nes-btn is-primary" id="stay">Continue</button>
+        </div>
+    </div>
 
 
     <div class="nes-container with-title is-centered">
