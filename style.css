@@ -2,6 +2,10 @@
     margin: 20px;
 }
 
+.nes-field {
+    margin-top: 20px;
+}
+
 #reset {
     display: none;
 }
